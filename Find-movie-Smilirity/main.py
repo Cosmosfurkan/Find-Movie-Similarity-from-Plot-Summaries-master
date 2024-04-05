@@ -2,12 +2,12 @@ from matplotlib.pyplot import stem
 import library
 import numpy as np
 
-
+# Set seed for reproducibility
 library.np.random.seed(0)
-
+# Load dataset
 movie = library.pd.read_csv("C:/Users/furkan/Desktop/Yapay zeka/Veri setleri/movies.csv")
 #print(movie.head())
-
+# Combine wiki_plot and imdb_plot into a single column
 movie["plot"] = movie["wiki_plot"].astype(str) + "\n" + movie["imdb_plot"].astype(str)
 #print(movie.head())
 
@@ -29,10 +29,6 @@ filtered = [word for word in words_tokenized if library.search('[a-zA-Z]', word)
 
 # Display filtered words to observe words after tokenization
 #print(filtered)
-
-
-# Import the SnowballStemmer to perform stemming
-# ... YOUR CODE FOR TASK 4 ...
 
 # Create an English language SnowballStemmer object
 stemmer = library.SnowballStemmer("english")
