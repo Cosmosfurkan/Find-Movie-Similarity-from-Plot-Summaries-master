@@ -27,6 +27,16 @@ To run the code, follow these steps:
 2. Modify the script to load your dataset and adjust any parameters as needed.
 3. Run the script to perform clustering and visualize the results.
 
+## Dependencies
+
+This project relies on the following libraries:
+
+- [NumPy](https://numpy.org/) (version x.x.x): NumPy is a fundamental package for numerical computing with Python.
+- [Pandas](https://pandas.pydata.org/) (version x.x.x): Pandas is a fast, powerful, flexible, and easy-to-use open-source data analysis and manipulation tool.
+- [NLTK](https://www.nltk.org/) (version x.x.x): NLTK, or the Natural Language Toolkit, is a Python library for natural language processing.
+- [Matplotlib](https://matplotlib.org/) (version x.x.x): Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.
+- [Scikit-learn](https://scikit-learn.org/stable/) (version x.x.x): Scikit-learn is a simple and efficient tool for data mining and data analysis, built on NumPy, SciPy, and matplotlib.
+
 ## Example
 
 In the provided code, movie plots are clustered and visualized using a dendrogram. Additionally, the movie most similar to Braveheart is identified as Gladiator.
