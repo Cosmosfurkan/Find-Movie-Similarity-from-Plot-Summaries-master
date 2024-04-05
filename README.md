@@ -35,10 +35,6 @@ In the provided code, movie plots are clustered and visualized using a dendrogra
 
 Contributions are welcome! Feel free to submit bug fixes, feature enhancements, or suggestions via pull requests.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 Special thanks to the libraries used in this project, including matplotlib, numpy, pandas, nltk, and scikit-learn.
