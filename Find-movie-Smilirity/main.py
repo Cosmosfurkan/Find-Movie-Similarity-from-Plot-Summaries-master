@@ -4,16 +4,18 @@ import numpy as np
 
 # Set seed for reproducibility
 library.np.random.seed(0)
+
 # Load dataset
 movie = library.pd.read_csv("C:/Users/furkan/Desktop/Yapay zeka/Veri setleri/movies.csv")
 #print(movie.head())
+
 # Combine wiki_plot and imdb_plot into a single column
 movie["plot"] = movie["wiki_plot"].astype(str) + "\n" + movie["imdb_plot"].astype(str)
 #print(movie.head())
 
 library.nl.download('punkt')
 
-
+# Tokenize a paragraph into sentences and store in sent_tokenized
 sent_tokenized = [sent for sent in library.sent_tokenize("""
                         Today (May 19, 2016) is his only daughter's wedding. 
                         Vito Corleone is the Godfather.
@@ -23,8 +25,6 @@ sent_tokenized = [sent for sent in library.sent_tokenize("""
 words_tokenized = [word for word in library.word_tokenize(sent_tokenized[0])]
 
 # Remove tokens that do not contain any letters from words_tokenized
-
-
 filtered = [word for word in words_tokenized if library.search('[a-zA-Z]', word)]
 
 # Display filtered words to observe words after tokenization
@@ -42,6 +42,7 @@ stemmed_words = [stemmer.stem(word) for word in filtered]
 # Print the stemmed_words to observe words after stemming
 #print("After stemming:   ", stemmed_words)
 
+# Define a function to perform both stemming and tokenization
 def tokenize_stemmer(text):
     tokens = [result for t in library.sent_tokenize(text)
                           for result in library.word_tokenize(t)]
